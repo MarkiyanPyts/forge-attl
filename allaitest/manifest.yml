@@ -1,0 +1,21 @@
+modules:
+  confluence:contentAction:
+    - key: allaitest-hello-world
+      function: main
+      title: allaitest
+  confluence:contextMenu:
+    - key: allaitest-hello-world-2
+      function: cm
+      title: allaitest2
+  function:
+    - key: main
+      handler: index.run
+    - key: cm
+      handler: cm.run
+app:
+  id: ari:cloud:ecosystem::app/8c15991d-c24f-4b73-bfdd-af602ea74c9c
+permissions:
+  scopes:
+    - read:confluence-content.summary
+    - read:page:confluence
+    - write:page:confluence
